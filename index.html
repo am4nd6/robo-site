@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>NEXUS ROBOTICS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=2" />
+  </head>
+  <body>
+    <canvas id="gl"></canvas>
+    <div id="fb">
+      WebGL is not available on this device. The 3D robot cannot be drawn, but
+      you can still read the full story below.
+    </div>
+    <div id="cur"><i></i><b></b></div>
+    <div id="bar"></div>
+    <header>
+      <b>NEXUS</b>
+      <nav>
+        <a href="#story" data-go="0">Rob&#244;</a
+        ><a href="#cat" data-go="1">Humanoides</a
+        ><a href="#ai" data-go="3">Inteligência</a
+        ><button class="btn sm mag" data-go="2">CONFIGURAR</button>
+      </nav>
+    </header>
+    <div id="dots">
+      <a href="#story" data-go="0" aria-label="Rob&#244;"></a
+      ><a href="#cat" data-go="1" aria-label="Humanoides"></a
+      ><a href="#conf" data-go="2" aria-label="Configurador"></a
+      ><a href="#ai" data-go="3" aria-label="Inteligência"></a
+      ><a href="#end" data-go="4" aria-label="Contato"></a>
+    </div>
+    <main>
+      <section id="story">
+        <div class="stage">
+          <div class="ghost" id="ghost">PRECISION · EVOLUTION</div>
+          <div class="hero" id="hero">
+            <h1>
+              <span class="ln"><span>O FUTURO</span></span
+              ><span class="ln"><span>TEM UMA FORMA</span></span>
+            </h1>
+            <p>
+              Robótica humanoide inteligente, criada para redefinir o futuro.
+            </p>
+          </div>
+          <svg id="lines">
+            <line id="l1" />
+            <circle id="c1" r="3" />
+            <line id="l2" />
+            <circle id="c2" r="3" />
+            <line id="l3" />
+            <circle id="c3" r="3" />
+          </svg>
+          <div class="tag" id="t1">
+            <h4>ENGENHARIA DE PRECISÃO</h4>
+            <p>
+              Um núcleo de energia selado movimenta cada articulação com
+              precisão de um décimo de grau.
+            </p>
+          </div>
+          <div class="tag" id="t2">
+            <h4>INTELIG&Ecirc;NCIA ADAPTATIVA</h4>
+            <p>
+              Visão, profundidade e sensores térmicos se unem na cabeça e
+              aprendem com cada tarefa.
+            </p>
+          </div>
+          <div class="tag" id="t3">
+            <h4>INTELIG&Ecirc;NCIA EM MOVIMENTO</h4>
+            <p>Mãos com doze eixos ajustam a força da pegada em tempo real.</p>
+          </div>
+          <div class="final" id="final"><h2>PROJETADO PARA EVOLUIR</h2></div>
+          <div id="phase"></div>
+        </div>
+      </section>
+      <section id="cat">
+        <div class="stage">
+          <div class="cap">NOSSOS HUMANOIDES</div>
+          <article class="prod">
+            <div class="k">Robótica Pessoal</div>
+            <h3>NEXUS ONE</h3>
+            <p>
+              Um companheiro silencioso e leve para sua casa. Aprende sua rotina
+              e se move pelos cômodos sem fazer barulho.
+            </p>
+            <dl>
+              <div>
+                <dt>ALTURA</dt>
+                <dd>1.62 m</dd>
+              </div>
+              <div>
+                <dt>PESO</dt>
+                <dd>58 kg</dd>
+              </div>
+              <div>
+                <dt>CARGA</dt>
+                <dd>12 kg</dd>
+              </div>
+              <div>
+                <dt>AUTONOMIA</dt>
+                <dd>8 h</dd>
+              </div>
+            </dl>
+            <button class="btn sm" data-m="0">EXPLORAR NEXUS ONE</button>
+          </article>
+          <article class="prod">
+            <div class="k">Assistência Profissional</div>
+            <h3>NEXUS PRO</h3>
+            <p>
+              Projetado para clínicas, laboratórios e recepções. Corpo de liga
+              prateada, destreza com as duas mãos e bateria traseira.
+            </p>
+            <dl>
+              <div>
+                <dt>ALTURA</dt>
+                <dd>1.75 m</dd>
+              </div>
+              <div>
+                <dt>PESO</dt>
+                <dd>72 kg</dd>
+              </div>
+              <div>
+                <dt>CARGA</dt>
+                <dd>25 kg</dd>
+              </div>
+              <div>
+                <dt>AUTONOMIA</dt>
+                <dd>10 h</dd>
+              </div>
+            </dl>
+            <button class="btn sm" data-m="1">EXPLORAR NEXUS PRO</button>
+          </article>
+          <article class="prod">
+            <div class="k">Automação Industrial</div>
+            <h3>NEXUS INDUSTRIAL</h3>
+            <p>
+              Uma estrutura ampla de grafite para linhas de produção e armazéns.
+              Bateria substituível, grande capacidade de carga, turno após turno.
+            </p>
+            <dl>
+              <div>
+                <dt>ALTURA</dt>
+                <dd>1.88 m</dd>
+              </div>
+              <div>
+                <dt>PESO</dt>
+                <dd>96 kg</dd>
+              </div>
+              <div>
+                <dt>CARGA</dt>
+                <dd>60 kg</dd>
+              </div>
+              <div>
+                <dt>AUTONOMIA</dt>
+                <dd>14 h</dd>
+              </div>
+            </dl>
+            <button class="btn sm" data-m="2">EXPLORAR NEXUS INDUSTRIAL</button>
+          </article>
+        </div>
+      </section>
+      <section id="conf">
+        <div class="panel">
+          <h2>MONTE O SEU</h2>
+          <p>
+            Arraste para girar o robô. Clique em uma peça ou escolha uma abaixo
+            para aproximar.
+          </p>
+          <div class="row">
+            <label>MODELO</label><button class="chip" data-model="0">One</button
+            ><button class="chip on" data-model="1">Pro</button
+            ><button class="chip" data-model="2">Industrial</button>
+          </div>
+          <div class="row">
+            <label>COMPONENTE</label
+            ><button class="chip on" data-grp="ALL">Visão completa</button
+            ><button class="chip" data-grp="HEAD">Cabeça</button
+            ><button class="chip" data-grp="TORSO">Tronco</button
+            ><button class="chip" data-grp="CORE">Núcleo</button
+            ><button class="chip" data-grp="ARMS">Braços</button
+            ><button class="chip" data-grp="HANDS">Mãos</button
+            ><button class="chip" data-grp="LEGS">Pernas</button>
+          </div>
+          <div class="row">
+            <label for="zoom">ZOOM</label
+            ><input
+              id="zoom"
+              type="range"
+              min="1.8"
+              max="8"
+              step=".05"
+              value="4.4"
+            />
+          </div>
+          <p id="info"></p>
+          <button class="btn mag" id="cfgBtn">CONFIGURAR SEU ROB&Ocirc;</button>
+        </div>
+      </section>
+      <section id="ai">
+        <div class="panel">
+          <h2>INTELIG&Ecirc;NCIA EM MOVIMENTO</h2>
+          <p id="aiTxt">
+            Perceber: milhares de pontos de sensores se espalham pela sala, e o
+            robô mapeia o que está ao redor.
+          </p>
+          <div class="row">
+            <button class="chip on" data-st="0">Perceber</button
+            ><button class="chip" data-st="1">Planejar</button
+            ><button class="chip" data-st="2">Agir</button>
+          </div>
+          <div class="stats">
+            <div>
+              <b data-n="1.2">0</b><span>milhão de amostras por segundo</span>
+            </div>
+            <div>
+              <b data-n="8">0</b><span>ms de tempo de rea&#231;&#227;o</span>
+            </div>
+            <div><b data-n="52">0</b><span>graus de liberdade</span></div>
+          </div>
+        </div>
+      </section>
+      <footer id="end">
+        <h2>ENCONTRE O FUTURO</h2>
+        <button class="btn mag" data-go="2">CONFIGURAR SEU ROB&Ocirc;</button
+        >
+        <small class="footer-credits"
+          >Modelos 3D por <strong>AssetFactory</strong>,
+          <strong>3DWorkbench</strong> e <strong>Diamonddogkz</strong>.
+          <br />NEXUS ROBOTICS é uma marca fictícia.<br />© Todos os direitos
+          sobre este site são reservados.</small
+        >
+      </footer>
+    </main>
+    <div id="dlg" role="dialog" aria-modal="true">
+      <div>
+        <h3>SEU NEXUS</h3>
+        <p id="sum"></p>
+        <button class="btn sm" id="req">
+          SOLICITAR ESTA CONFIGURA&Ccedil;&Atilde;O</button
+        ><button class="chip" id="cls">Continuar editando</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/model3d.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
+  </body>
+</html>
