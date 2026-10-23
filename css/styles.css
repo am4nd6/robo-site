@@ -406,6 +406,10 @@ h3 {
   font: 900 28px var(--d);
 }
 @media (max-width: 760px) {
+  /* Remove apenas as linhas/setas no mobile; os textos continuam visíveis. */
+  #lines {
+    display: none;
+  }
   .hero {
     bottom: auto;
     top: calc(12vh + env(safe-area-inset-top, 0px));
