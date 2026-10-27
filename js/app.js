@@ -456,11 +456,13 @@ function frame() {
   cam.setViewOffset(W, H, -sx * W, -sy * H, W, H);
   /* robot */
   const catModel = clamp(Math.round(C.f - 0.5), 0, 2);
-  const selectedModel = md === 2 ? cfg.model : catModel;
+  // Mantém o modelo escolhido ao sair do configurador; caso contrário,
+  // ao entrar na seção de IA o valor voltava para o modelo da categoria.
+  const selectedModel = md >= 2 ? cfg.model : catModel;
   const showingPro =
-    (md === 1 || md === 2) && selectedModel === 1 && proLoaded;
+    md <= 3 && md >= 1 && selectedModel === 1 && !!proRobot;
   const showingIndustrial =
-    (md === 1 || md === 2) && selectedModel === 2 && industrialLoaded;
+    md <= 3 && md >= 1 && selectedModel === 2 && !!industrialRobot;
   if (
     (md === 1 || md === 2) &&
     selectedModel === 2 &&
@@ -472,7 +474,7 @@ function frame() {
     glbLoaded &&
     !showingPro &&
     !showingIndustrial &&
-    (md !== 2 || selectedModel === 0) &&
+    selectedModel === 0 &&
     cur.vis > 0.01;
   if (proRobot) {
     proRobot.visible = showingPro && cur.vis > 0.01;
