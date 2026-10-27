@@ -337,6 +337,7 @@ function frame() {
     m = tops.reduce((a, v, i) => (y + H * 0.5 >= v ? i : a), 0),
     md = Math.min(m, 3),
     asp = W / H;
+  document.querySelector("header").classList.toggle("scrolled", y > 2);
   const catVisible = y >= tops[1];
   $("#cat").style.visibility = catVisible ? "visible" : "hidden";
   $("#cat").style.pointerEvents = catVisible ? "" : "none";
