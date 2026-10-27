@@ -70,7 +70,7 @@ tl.fromTo(
   .fromTo(S, { p: 0 }, { p: 1, duration: 1, ease: "none" }, 0);
 // Um scrub menor mantém a animação ligada ao scroll sem deixar as setas
 // atrasarem perceptivelmente o movimento do usuário.
-const scr = true;
+const scr = reduce ? true : 0.35;
 ScrollTrigger.create({
   animation: tl,
   trigger: "#story",
