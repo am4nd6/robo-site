@@ -394,9 +394,9 @@ function frame() {
       th: 5.83 + f * 0.75 + hv * 0.35,
       di: asp < 0.9 ? 7.5 : 5.4,
       // Em telas estreitas, deixa mais espaço para o conteúdo acima do robô.
-      cy: asp < 0.9 ? 2.1 : 1.35,
+      cy: W < 625 ? 3.05 : asp < 0.9 ? 2.1 : 1.35,
       sx: 0.21,
-      my: 0.2,
+      my: W < 625 ? 0.38 : 0.2,
       d: 0,
       vis: 1,
       ai: 0,

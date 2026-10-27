@@ -621,6 +621,35 @@ h3 {
     font-size: 12px;
   }
 }
+@media (max-width: 420px) {
+  .prod h3 {
+    font-size: 42px;
+  }
+  .prod .k {
+    font-size: 10px;
+  }
+  .prod p {
+    max-width: 250px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .prod dt {
+    font-size: 8px;
+  }
+  .prod dd {
+    font-size: 19px;
+  }
+  .prod .btn.sm {
+    padding: 8px 10px;
+    font-size: 8px;
+  }
+}
+@media (max-width: 763px) {
+  /* Separa o título da seção do nome do produto. */
+  .prod {
+    padding-top: 42px;
+  }
+}
 #dlg h3 {
   font-size: 46px;
 }
