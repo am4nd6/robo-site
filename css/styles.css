@@ -321,6 +321,7 @@ h3 {
   bottom: 20vh;
 }
 #lines {
+  display: none;
   position: absolute;
   inset: 0;
   width: 100%;

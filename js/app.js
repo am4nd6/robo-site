@@ -68,7 +68,9 @@ tl.fromTo(
     0.75,
   )
   .fromTo(S, { p: 0 }, { p: 1, duration: 1, ease: "none" }, 0);
-const scr = reduce ? true : 1;
+// Um scrub menor mantém a animação ligada ao scroll sem deixar as setas
+// atrasarem perceptivelmente o movimento do usuário.
+const scr = true;
 ScrollTrigger.create({
   animation: tl,
   trigger: "#story",
@@ -538,10 +540,12 @@ function frame() {
   if (md == 0) {
     [
       ["t1", "core", 0.5],
-      ["t2", "head", 0.55],
-      ["t3", "handR", 0.6],
+      ["t2", "head", 0.58],
+      ["t3", "handR", 0.66],
     ].forEach(([id, pn, s], i) => {
-      const v = sm(s, s + 0.06, p) * (1 - sm(0.71, 0.75, p)),
+       // Cada tópico entra em sequência, mantendo uma curva reversível no
+       // scroll para não criar atraso diferente ao subir e ao descer.
+       const v = sm(s, s + 0.06, p) * (1 - sm(0.78, 0.85, p)),
         el = $("#" + id),
         ln = $("#l" + (i + 1)),
         ci = $("#c" + (i + 1));

@@ -32,9 +32,9 @@ Não há processo de build. É necessário ter o Node.js instalado e acesso à i
 │   ├── app.js              # Interações, navegação e animações
 │   └── model3d.js          # Cena Three.js e carregamento dos modelos
 └── model-3d/
-    ├── robot_character.glb # Modelo base / Nexus One
-    ├── security_robot.glb  # Nexus Pro
-    └── robot.glb           # Nexus Industrial
+    ├── nexus_one.glb       # Nexus One
+    ├── nexus_pro.glb       # Nexus Pro
+    └── nexus_industrial.glb # Nexus Industrial
 ```
 
 ## Como executar pelo terminal

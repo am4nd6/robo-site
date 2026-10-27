@@ -8,7 +8,7 @@ let R = null,
   floor,
   aiG,
   M_ = {},
-  cfg = { model: 1, fin: null, th: 6.683, zoom: 5.4, sel: null },
+  cfg = { model: 0, fin: null, th: 6.683, zoom: 5.4, sel: null },
   foc = new THREE.Vector2(0, 1.15),
   selSet = new Set(),
   pack,
@@ -160,7 +160,7 @@ function init3D() {
   robot = new THREE.Group();
   sc.add(robot);
   new THREE.GLTFLoader().load(
-    "model-3d/robot_character.glb",
+    "model-3d/nexus_one.glb",
     (gltf) => {
       sc.remove(robot);
       robot = gltf.scene;
@@ -184,7 +184,7 @@ function init3D() {
     if (industrialRequested) return;
     industrialRequested = true;
     new THREE.GLTFLoader().load(
-    "model-3d/robot.glb",
+    "model-3d/nexus_industrial.glb",
     (gltf) => {
       industrialRobot = gltf.scene;
       industrialRobot.scale.setScalar(industrialBase);
@@ -205,8 +205,11 @@ function init3D() {
       console.error("Não foi possível carregar o Nexus Industrial:", error),
     );
   };
+  // Carrega o Industrial em paralelo aos outros modelos. Assim, ao chegar
+  // nessa opção, não há um frame em que o modelo padrão apareça antes dele.
+  window.loadIndustrialModel();
   new THREE.GLTFLoader().load(
-    "model-3d/security_robot.glb",
+    "model-3d/nexus_pro.glb",
     (gltf) => {
       proRobot = gltf.scene;
       proBase = 0.17;
