@@ -417,9 +417,11 @@ function frame() {
     T = {
       th: cfg.th,
       di: cfg.zoom,
-      cy: foc.y + 0.12,
+      // Em telas menores, reserva a área superior para os controles e leva
+      // o modelo para baixo deles.
+      cy: foc.y + (W < 750 ? 3 : 0.12),
       sx: 0.2,
-      my: -0.15,
+      my: W < 750 ? 0.3 : -0.15,
       d: 0,
       vis: 1,
       ai: 0,

@@ -582,6 +582,45 @@ h3 {
 #dlg.on div {
   transform: none;
 }
+@media (max-width: 750px) {
+  body {
+    font-size: 14px;
+  }
+  .hero h1,
+  .final h2,
+  .prod h3,
+  #conf .panel h2,
+  #ai .panel h2,
+  #end h2 {
+    font-size: clamp(42px, 10vw, 76px);
+  }
+  .hero p,
+  .prod p,
+  #ai .panel p {
+    font-size: 13px;
+  }
+  .tag h4 {
+    font-size: clamp(20px, 5vw, 30px);
+  }
+  #conf {
+    align-items: flex-start;
+    padding-top: 14vh;
+  }
+  #conf .panel h2 {
+    font-size: clamp(40px, 9vw, 68px);
+  }
+  #conf .panel p {
+    max-width: 360px;
+    font-size: 14px;
+  }
+  #conf .row label {
+    font-size: 10px;
+  }
+  #conf .chip {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
 #dlg h3 {
   font-size: 46px;
 }
