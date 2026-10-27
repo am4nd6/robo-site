@@ -160,24 +160,6 @@ header a:hover {
   color: var(--bl);
   white-space: nowrap;
 }
-.touch-trail {
-  position: fixed;
-  z-index: 250;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  pointer-events: none;
-  background: #4b8dff;
-  box-shadow: 0 0 10px 4px rgba(75, 141, 255, 0.55);
-  transform: translate(-50%, -50%);
-  animation: touchTrail 0.55s ease-out forwards;
-}
-@keyframes touchTrail {
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(3.5);
-  }
-}
       #cur.hot i {
         transform: scale(6);
       }

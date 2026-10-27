@@ -248,14 +248,6 @@ cf.addEventListener("pointerdown", (e) => {
 addEventListener("pointermove", (e) => {
   M.x = (e.clientX / W) * 2 - 1;
   M.y = -((e.clientY / H) * 2 - 1);
-  if (matchMedia("(pointer: coarse)").matches) {
-    const trail = document.createElement("i");
-    trail.className = "touch-trail";
-    trail.style.left = `${e.clientX}px`;
-    trail.style.top = `${e.clientY}px`;
-    document.body.appendChild(trail);
-    trail.addEventListener("animationend", () => trail.remove(), { once: true });
-  }
   if (drag) {
     drag.mv = Math.max(drag.mv, Math.abs(e.clientX - drag.x));
     cfg.th = drag.th - (e.clientX - drag.x) * 0.008;
